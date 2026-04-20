@@ -83,7 +83,6 @@
             z-index: 2;
         }
 
-        /* Mobile responsive container padding */
         @media (max-width: 640px) {
             .container {
                 padding: 0 16px;
@@ -96,7 +95,6 @@
             backdrop-filter: blur(1px);
         }
 
-        /* Reduce section padding on mobile */
         @media (max-width: 768px) {
             section {
                 padding: 60px 0;
@@ -109,7 +107,7 @@
             }
         }
 
-        /* Hero Section - Magical Rotation & Glow */
+        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -152,6 +150,74 @@
             }
         }
 
+        /* Beautiful Personalized Invitation Message */
+        .invitation-message {
+            background: linear-gradient(135deg, rgba(184, 122, 75, 0.45), rgba(154, 94, 54, 0.45));
+            backdrop-filter: blur(12px);
+            border-radius: 60px;
+            padding: 22px 35px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(218, 165, 115, 0.6);
+            display: inline-block;
+            width: auto;
+            max-width: 95%;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            animation: invitationGlow 3s infinite alternate;
+        }
+
+        @keyframes invitationGlow {
+            0% {
+                box-shadow: 0 0 8px rgba(218, 165, 115, 0.2);
+                border-color: rgba(218, 165, 115, 0.4);
+            }
+
+            100% {
+                box-shadow: 0 0 28px rgba(218, 165, 115, 0.5);
+                border-color: rgba(218, 165, 115, 0.9);
+            }
+        }
+
+        .invitation-message p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #f3e1ca;
+            letter-spacing: 1px;
+            line-height: 1.6;
+        }
+
+        .invitation-message i {
+            color: #eac188;
+            margin: 0 8px;
+        }
+
+        .guest-name-highlight {
+            color: #fce6b4;
+            font-weight: 700;
+            text-transform: capitalize;
+            text-shadow: 0 0 10px rgba(218, 165, 115, 0.8);
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 4px 12px;
+            border-radius: 40px;
+            display: inline-block;
+        }
+
+        @media (max-width: 640px) {
+            .invitation-message {
+                padding: 15px 22px;
+            }
+
+            .invitation-message p {
+                font-size: 1rem;
+            }
+
+            .guest-name-highlight {
+                font-size: 1.1rem;
+                padding: 3px 8px;
+            }
+        }
+
         .hero h2 {
             font-family: 'Playfair Display', serif;
             font-size: 1.5rem;
@@ -163,7 +229,6 @@
             animation: gentleRotate 5s infinite alternate;
         }
 
-        /* Mobile hero heading */
         @media (max-width: 640px) {
             .hero h2 {
                 font-size: 1rem;
@@ -197,29 +262,6 @@
             }
         }
 
-        .parent-invitation {
-            font-size: 1.1rem;
-            letter-spacing: 3px;
-            font-weight: 300;
-            color: #e9c7a1;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            background: rgba(0, 0, 0, 0.3);
-            display: inline-block;
-            padding: 6px 20px;
-            border-radius: 40px;
-            backdrop-filter: blur(4px);
-        }
-
-        /* Mobile parent invitation */
-        @media (max-width: 640px) {
-            .parent-invitation {
-                font-size: 0.7rem;
-                letter-spacing: 2px;
-                padding: 5px 12px;
-            }
-        }
-
         .hero .names {
             font-family: 'Cormorant Garamond', serif;
             font-size: 5rem;
@@ -231,10 +273,8 @@
             margin: 20px 0;
             animation: magicalSpin 8s infinite alternate ease-in-out;
             display: inline-block;
-            word-break: keep-all;
         }
 
-        /* Mobile names */
         @media (max-width: 768px) {
             .hero .names {
                 font-size: 3.5rem;
@@ -282,7 +322,6 @@
             animation: borderRotate 6s infinite linear;
         }
 
-        /* Mobile date tag */
         @media (max-width: 640px) {
             .hero .date-tag {
                 font-size: 0.9rem;
@@ -307,42 +346,7 @@
             }
         }
 
-        .btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #b87a4b, #9a5e36);
-            color: #fff6ea;
-            font-size: 0.9rem;
-            font-weight: 500;
-            padding: 14px 38px;
-            margin-top: 28px;
-            border-radius: 50px;
-            text-decoration: none;
-            letter-spacing: 2px;
-            transition: all 0.4s ease;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 10px 18px rgba(0, 0, 0, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Mobile button */
-        @media (max-width: 640px) {
-            .btn {
-                padding: 12px 28px;
-                font-size: 0.8rem;
-                letter-spacing: 1px;
-            }
-        }
-
-        .btn:hover {
-            transform: scale(1.05) rotate(1deg);
-            background: linear-gradient(135deg, #cb8e5c, #b06a3b);
-            box-shadow: 0 0 20px rgba(218, 165, 115, 0.8);
-            letter-spacing: 3px;
-        }
-
-        /* Section titles with rotation animation */
+        /* Section titles */
         .section-title {
             text-align: center;
             font-family: 'Playfair Display', serif;
@@ -356,7 +360,6 @@
             animation: titleGlide 2s ease-out;
         }
 
-        /* Mobile section title */
         @media (max-width: 768px) {
             .section-title {
                 font-size: 2.2rem;
@@ -407,7 +410,7 @@
             }
         }
 
-        /* Story cards with 3D rotation */
+        /* Story cards */
         .story-grid {
             display: flex;
             flex-wrap: wrap;
@@ -417,7 +420,6 @@
             perspective: 1200px;
         }
 
-        /* Mobile story grid */
         @media (max-width: 768px) {
             .story-grid {
                 flex-direction: column;
@@ -439,12 +441,10 @@
             animation: cardRotateIn 1s ease-out;
         }
 
-        /* Mobile story text */
         @media (max-width: 640px) {
             .story-text {
                 padding: 22px;
                 font-size: 0.95rem;
-                min-width: auto;
             }
         }
 
@@ -496,18 +496,13 @@
             transition: transform 0.4s;
         }
 
-        /* Mobile story image */
         @media (max-width: 640px) {
             .story-img img {
                 max-width: 300px;
             }
         }
 
-        .story-img img:hover {
-            transform: scale(1.02) rotate(1deg);
-        }
-
-        /* details cards with magical spin on hover */
+        /* details cards */
         .details-cards {
             display: flex;
             flex-wrap: wrap;
@@ -515,7 +510,6 @@
             justify-content: center;
         }
 
-        /* Mobile details cards */
         @media (max-width: 768px) {
             .details-cards {
                 flex-direction: column;
@@ -538,7 +532,6 @@
             animation: cardAppear 0.8s backwards;
         }
 
-        /* Mobile card */
         @media (max-width: 768px) {
             .card {
                 min-width: auto;
@@ -584,7 +577,6 @@
             transition: transform 0.5s;
         }
 
-        /* Mobile card icon */
         @media (max-width: 640px) {
             .card i {
                 font-size: 2.2rem;
@@ -599,7 +591,7 @@
             transform: rotate(360deg) scale(1.1);
         }
 
-        /* gallery with rotating polaroid style */
+        /* gallery */
         .gallery-grid {
             display: flex;
             flex-wrap: wrap;
@@ -607,7 +599,6 @@
             justify-content: center;
         }
 
-        /* Mobile gallery */
         @media (max-width: 640px) {
             .gallery-grid {
                 gap: 16px;
@@ -626,18 +617,11 @@
             animation: floatGallery 5s infinite alternate;
         }
 
-        /* Mobile gallery item */
         @media (max-width: 640px) {
             .gallery-item {
                 width: calc(50% - 12px);
                 height: auto;
                 aspect-ratio: 1 / 1;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .gallery-item {
-                width: calc(50% - 10px);
             }
         }
 
@@ -669,7 +653,7 @@
             transition: 0.4s;
         }
 
-        /* Simple contact / inquiry section instead of RSVP */
+        /* inquiry section */
         .inquiry-section {
             text-align: center;
             background: rgba(18, 12, 9, 0.6);
@@ -682,18 +666,10 @@
             animation: glowRsvp 3s infinite alternate;
         }
 
-        /* Mobile inquiry section */
         @media (max-width: 768px) {
             .inquiry-section {
                 padding: 35px 25px;
                 border-radius: 40px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .inquiry-section {
-                padding: 28px 18px;
-                border-radius: 30px;
             }
         }
 
@@ -716,7 +692,6 @@
             margin-bottom: 20px;
         }
 
-        /* Mobile inquiry heading */
         @media (max-width: 640px) {
             .inquiry-section h3 {
                 font-size: 1.5rem;
@@ -727,13 +702,6 @@
             }
         }
 
-        .inquiry-section p {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin-bottom: 20px;
-            color: #e9d5bc;
-        }
-
         .contact-details {
             display: flex;
             flex-wrap: wrap;
@@ -742,7 +710,6 @@
             margin-top: 30px;
         }
 
-        /* Mobile contact details */
         @media (max-width: 640px) {
             .contact-details {
                 flex-direction: column;
@@ -764,17 +731,11 @@
             word-break: break-all;
         }
 
-        /* Mobile contact card */
         @media (max-width: 640px) {
             .contact-card {
                 justify-content: center;
                 padding: 12px 18px;
                 font-size: 0.85rem;
-                gap: 10px;
-            }
-
-            .contact-card i {
-                font-size: 1.2rem;
             }
         }
 
@@ -798,26 +759,10 @@
             color: #dac09e;
         }
 
-        /* Mobile footer */
         @media (max-width: 640px) {
             footer {
                 padding: 30px 16px;
                 font-size: 0.75rem;
-            }
-        }
-
-        /* Additional mobile text adjustments */
-        @media (max-width: 640px) {
-            .hero div[style*="font-size: 1rem"] {
-                font-size: 0.8rem !important;
-            }
-
-            .card p {
-                font-size: 0.85rem;
-            }
-
-            .story-text p {
-                font-size: 0.9rem;
             }
         }
     </style>
@@ -828,26 +773,36 @@
     <!-- magical particle background -->
     <div class="magic-bg" id="particles"></div>
 
-    <!-- Hero Section with magical rotations -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <div class="parent-invitation">
-                <i class="fas fa-heart" style="color:#eac188;"></i> With immense joy, we invite you to our son's wedding
-                <i class="fas fa-heart" style="color:#eac188;"></i>
+            <!-- ========================================================== -->
+            <!-- BEAUTIFUL INVITATION MESSAGE - EDIT THE NAME BELOW -->
+            <!-- Just change "Mr & Mrs Ali" to any name you want! -->
+            <!-- ========================================================== -->
+            <div class="invitation-message">
+                <p>
+                    <i class="fas fa-star"></i>
+                    Dear <span class="guest-name-highlight">Mr & Mrs Ali</span>,
+                    <i class="fas fa-heart"></i>
+                </p>
+                <p style="font-size: 0.9em; margin-top: 8px;">
+                    we are inviting you to our beloved son <strong>Umair Qasim's</strong> wedding
+                </p>
             </div>
-            <h2>✦ SAVE THE DATE ✦</h2>
+
             <div class="names">Fiza <span style="font-size: 3rem;">&</span> Umair Qasim</div>
             <div class="date-tag">
                 <i class="fas fa-feather-alt"></i> 15th May 2026 ✦ 4:00 PM <i class="fas fa-feather-alt"></i>
             </div>
             <div
                 style="font-size: 1rem; font-weight: 300; background: rgba(0,0,0,0.4); display: inline-block; padding: 5px 20px; border-radius: 50px;">
-                🌙 Grand Orchard Marquee · Lahore
+                🌙 The Grand Willow Estate · California
             </div>
         </div>
     </section>
 
-    <!-- Our Story Section - Beautiful union of Fiza & Umair -->
+    <!-- Our Story Section -->
     <section id="story">
         <div class="container">
             <h2 class="section-title">Their Enchanted Journey</h2>
@@ -871,7 +826,7 @@
         </div>
     </section>
 
-    <!-- Event details with rotating icons -->
+    <!-- Event details -->
     <section id="details">
         <div class="container">
             <h2 class="section-title">The Celebration ✨</h2>
@@ -907,7 +862,7 @@
         </div>
     </section>
 
-    <!-- Gallery with rotating polaroids -->
+    <!-- Gallery -->
     <section id="gallery">
         <div class="container">
             <h2 class="section-title">Treasured Moments</h2>
@@ -930,7 +885,7 @@
         </div>
     </section>
 
-    <!-- Inquiry / Contact Section (replaces RSVP) -->
+    <!-- Inquiry / Contact Section -->
     <section id="contact">
         <div class="container">
             <div class="inquiry-section">
@@ -986,7 +941,7 @@
         }
         createParticles();
 
-        // Add smooth scroll for anchor links
+        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
